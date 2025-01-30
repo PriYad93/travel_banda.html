@@ -5,23 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Travel Website</title>
   <style>
+
+
+
+
+  .explore-india {
+    text-align: center;
+    padding: 40px;
+    height: 500px;
+  }
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .explore-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  .explore-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .explore-item:hover {
+    transform: scale(1.05);
+  }
+
+  .next_place{
+      padding: 0;
+      background-image: url('taj.jpeg');
+      background-size: contain;
+      height: 1000px;
+      
+    }
+  .overlay {
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+
+
+   
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #b7b7a4;
+      background-color: #f3efed;
     }
 
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #f4f4f4;
+      background-color: #e9e6dd;
       padding: 10px 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      height: 25px;
     }
 
     .logo img {
@@ -198,6 +252,8 @@
     .search-bar button:hover {
       background-color: #005bb5;
     }
+
+    
 
     .team-section {
       display: grid;
@@ -395,7 +451,7 @@
       background-color: #005bb5;
     }
     .culture{
-
+      
     }
     .food{
 
@@ -406,12 +462,24 @@
     .people{
       
     }
+    .logo{
+      padding-top: 15px;
+      font-size: 30px;
+      text-align: center;
+      font-family: 'samarkan';
+      src:url('samarkan.zip');
+     
+    }
 
   </style>
 </head>
 <body>
+  <div class="next_place">
   <div class="logo">
+   
     <img src="travelji.jpg" alt="Travel Banda">
+
+    Travel Banda
   </div>
   <div class="navbar">
    
@@ -427,7 +495,7 @@
           <li><a href="#">Archives</a></li>
         </ul>
       </li>
-      <li><a href="states.html">Indian States</a></li>
+      <li><a href="#">Foods</a></li>
     </ul>
     <div class="search-bar">
       <input type="text" placeholder="Search">
@@ -435,45 +503,45 @@
     </div>
   </div>
 
- <section class="next_place">
+ 
   <h4>plan your trip in India</h4>
 <p  class="wheretonext">Where to next</p>
 <p>to knows india </p>
-<section></section>
-<section>
-  <div class="culture">culture</div>
-
-
+ 
+<section class="explore-india">
+  <h2>Explore India</h2>
+  <div class="explore-grid">
+    <div class="explore-item">
+      <div class="overlay">Culture</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">Food</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">Festivals</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">People</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">Dance & Music</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">Traditions</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">Languages</div>
+    </div>
+    <div class="explore-item">
+      <div class="overlay">Monuments</div>
+    </div>
+  </div>
 </section>
-<section>
-  <div class="food">food</div>
+ 
 
-</section>
-<section>
-  <div class="festival">festival</div>
-
-</section>
-<section>
-  <div class="people">people</div>
-
-</section>
-<section>
-  <div class="dance">dance and music</div>
-
-</section>
-
-
-
-
-
-<div></div>
-<div></div>
-
- </section>
-
-  <!-- Popular States -->
   <section class="popular-states">
-    <h2>Most Popular States</h2>
+    <h2 >Most Popular States</h2>
+  
     <div class="popular-states-container">
       <section>
         <div class="container_rajas"></div>
@@ -551,7 +619,7 @@
 
  <header>
   <h1>Our Services</h1>
-  <p>Explore the range of services we offer to make your travel experiences better.</p>
+  <p style="text-align: center; color: #00000;">Explore the range of services we offer to make your travel experiences better.</p>
 </header>
 
 <!-- Services Section -->
@@ -600,7 +668,7 @@
 
   
  <div>
-  <div>About Us</div>
+  <div style="text-align: center;">About Us</div>
  <section class="team-section">
   <div class="team-member">
     <img src="student1.png" alt="Student 1">
@@ -617,8 +685,9 @@
   <footer>
     <p>Connect with us on:</p>
     <div class="footer-links">
-      <a href="https://www.instagram.com" target="_blank">📸 Instagram</a>
-      <a href="https://www.facebook.com" target="_blank">📘 Facebook</a>
+      
+      <a href="https://www.instagram.com" target="_blank"> Instagram</a>
+      <a href="https://www.facebook.com" target="_blank"> Facebook</a>
     </div>
   </footer>
 </body>
